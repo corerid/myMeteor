@@ -3,26 +3,23 @@
 </head>
 
 <body>
-    <div class="container">
-      <header>
-        <h1>Montly Resolution</h1>
-        <form class="new-resolution">
-          <input type="text" name="title" placeholder="A new resolution">
-          <input type="submit" value="Submit">
-        </form>
-      </header>
-    <ul>
-      {{#each resolutions}}
-        {{> resolution}}
-      {{/each}}
-    </ul>
-  </div>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+  {{> info}}
 </body>
 
-<template name="resolution">
-  <li class="{{#if checked}}checked{{/if}}">
-    <input type="checkbox" checked="{{checked}}" class="toggle-checked">
-    <span class="tedxt">{{title}}</span>
-    <button class="delete">Remove</button>
-  </li>
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="info">
+  <h2>Learn Meteor!</h2>
+  <ul>
+    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
+    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
+    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
+    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+  </ul>
 </template>
